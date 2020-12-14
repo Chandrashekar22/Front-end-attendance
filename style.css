@@ -1,89 +1,59 @@
-* {
+/* Css Reset */
+
+body {
+    font-family: 'Baloo Bhaina 2', cursive;
+    color: white;
     margin: 0px;
     padding: 0px;
-}
-
-.logincontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    background-color: aquamarine;
     background-image: url("bg.jpg");
-    font-family: 'Baloo Bhaina 2', cursive;
 }
 
-div {
-    text-align: center;
-}
-
-input[type="submit"] {
-    width: 92px;
-    height: 40px;
-    padding: 10px 10px;
-    font-size: 15px;
-    margin: 15px;
-    border: 2px solid red;
-    border-radius: 17px;
-    background-color: yellow;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-input[type="text"] {
-    border: 2px solid red;
-    height: 25px;
-    width: 200px;
-    border-radius: 20px;
-    padding: 10px;
-    text-align: center;
-    background-color: burlywood;
-    color: maroon;
-    font-weight: bolder;
-    cursor: pointer;
-    margin: 10px;
-}
-
-input[type="password"] {
-    border: 2px solid red;
-    height: 25px;
-    margin: 10px;
-    margin-top: 3px;
-    width: 200px;
-    border-radius: 20px;
-    padding: 10px;
-    text-align: center;
-    background-color: burlywood;
-    color: black;
-    font-weight: bolder;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: orange;
-    width: 80px;
-    transition: width 0.1s ease-in;
-}
-
-input[type="text"]:hover {
-    background-color: orange;
-    width: 180px;
-    transition: width 0.1s ease-in;
-}
-
-input[type="password"]:hover {
-    background-color: orange;
-    width: 180px;
-    transition: width 0.1s ease-in;
-}
-
-#logname {
-    text-align: center;
-    font-weight: bolder;
-    margin: 10px;
-    font-size: x-large;
-    color: yellow;
+.mid {
     display: block;
+    margin: 20px auto;
+    width: 53%;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 23px;
+    color: white;
+}
+
+.navbar li a {
+    text-decoration: none;
+    padding: 0px 5px;
+    color: white;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: chocolate;
+    text-decoration: solid underline;
+}
+
+.right {
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+.btn {
+    background-color: black;
+    font-family: 'Baloo Bhaina 2', cursive;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: rgb(99, 80, 80);
 }
