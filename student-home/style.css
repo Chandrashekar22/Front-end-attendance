@@ -46,14 +46,32 @@ header {
     color: white;
 }
 
-.navbar li a {
+.navbar li button {
     text-decoration: none;
     padding: 0px 5px;
-    color: white;
+    background-color: rgba(0,0,0,0);
+    font-size: inherit;
+    border: 0px;
+    color: inherit;
+    font-family: inherit;
 }
 
-.navbar li a:hover,
-.navbar li a.active {
+.navbar li button:hover {
+    cursor: pointer;
+    color: chocolate;
+    text-decoration: solid underline;
+}
+/*
+.navbar li a:visited {
+     color: chocolate;
+    text-decoration: solid underline;
+}
+.navbar li a:hover {
+    color: chocolate;
+    text-decoration: solid underline;
+}*/
+
+.navbar button:focus {
     color: chocolate;
     text-decoration: solid underline;
 }

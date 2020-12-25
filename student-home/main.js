@@ -1,26 +1,13 @@
 $("#contact-info").hide();
-/*
-$(".right button").click(function(){
-	$("#student-details").hide();
-	$("#contact-info").toggle();
-});
-*/
-/*
-$("#student-details").click(function(){
-	$(this).toggle();
-});
-*/
 
-var url = "http://77bcbb72f106.ngrok.io/student/01JST18CS001";
+//var url = "http://77bcbb72f106.ngrok.io/student/01JST18CS001";
 var tid = sessionStorage.getItem("tid");
-//var url = "http://77bcbb72f106.ngrok.io/student/" + tid;
+var url = "http://77bcbb72f106.ngrok.io/student/" + tid;
 
 $.getJSON(url, {tid}, function(data){
 	console.log(data);
 	console.log(typeof(data));
 }).done(function(data){
-	//console.log(data);
-	//$("#student-details").html("Name: "+ data.name + "<br>Semester: " + data.sem);
 	let items = [];
 	$.each( data, function(key, val) {
 		if(key == "courses") {
@@ -32,7 +19,6 @@ $.getJSON(url, {tid}, function(data){
 					v.absent_dates.forEach(function(v1, i1) {
 						items.push(v1 + "<br>");
 					});
-					//items.push("<td>" + v.absent_dates + "</")
 					items.push("</td>");
 				}
 			});
@@ -43,6 +29,14 @@ $.getJSON(url, {tid}, function(data){
 	});
 	$("#student-details").html("<ul>" + items.join("") + "</ul>");
 	console.log(data["usn"]);
+});
+
+$("#about-page-direction").click(function(e){
+	$("main").load("./aboutme.html");
+});
+
+$("#student-direction").click(function(){
+	location.reload();
 });
 
 function capitalize(string) {
