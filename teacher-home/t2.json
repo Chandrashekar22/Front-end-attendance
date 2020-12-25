@@ -1,0 +1,43 @@
+{
+  "courses": {
+    "CS320": {
+      "course_name": "Data Structures", 
+      "no_of_classes_taken": 5, 
+      "students": [
+        {
+          "name": "Richard", 
+          "email": "richard@gmail.com", 
+          "phone": "9585412653", 
+          "attendance_status": 100.0
+        }
+      ]
+    }, 
+    "CS510": {
+      "course_name": "Blockchain", 
+      "no_of_classes_taken": 5, 
+      "students": [
+        {
+          "name": "Dinesh", 
+          "email": "dinesh@gmail.com", 
+          "phone": "9643524521", 
+          "attendance_status": 60.0
+        }, 
+        {
+          "name": "Narayan", 
+          "email": "bhatj1964@gmail.com", 
+          "phone": "9483717117", 
+          "attendance_status": 100.0
+        }, 
+        {
+          "name": "Sukumar", 
+          "email": "skmrsharma@gmail.com", 
+          "phone": "9483717454", 
+          "attendance_status": 100.0
+        }
+      ]
+    }
+  }, 
+  "teacher_name": "Benjamin", 
+  "department_name": "Computer Science", 
+  "HOD": "Adam"
+}

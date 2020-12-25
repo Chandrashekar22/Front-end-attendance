@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!--<script type="text/javascript" src="jquery.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#" class="active">Take Attendance</a></li>
+                <li><a href="#">About Me</a></li>
+            </ul>
+        </div>
+<!--         <div class="right" class="hoverinfo">
+            <span class="btn">Contact Us</span>
+            <div id="contactinfo">
+                <p><b>Narayan Bhat</b>: <span class="phone-no">9483717117</span> <span class="our-email-id">bhatj</span></p>
+                <p><b>Chandrashekhar V Shetti: </b><span class="phone-no">9449749787</span> <span class="our-email-id">cvshetti22@gmail.com</span></p>
+                <p><b>SK Shravan: </b><span class="phone-no">9381529627</span> <span class="our-email-id">sk.shravan00@gmail.com</span></p>
+                <p><b>Sukumara Sharma: </b><span class="phone-no">9743428552</span> <span class="our-email-id">sharmasukumara6@gmail.com</span></p>
+            </div>
+        </div> -->
+        <div class="right hoverinfo">
+            <span class="btn">Contact Us</span>
+            <div id="contactinfo">
+                <p><b>Narayan Bhat</b>: <span class="phone-no">9483717117</span> <span class="our-email-id">bhatj@gmail.com</span></p>
+                <p><b>Chandrashekhar V Shetti: </b><span class="phone-no">9449749787</span> <span class="our-email-id">cvshetti22@gmail.com</span></p>
+                <p><b>SK Shravan: </b><span class="phone-no">9381529627</span> <span class="our-email-id">sk.shravan00@gmail.com</span></p>
+                <p><b>Sukumara Sharma: </b><span class="phone-no">9743428552</span> <span class="our-email-id">sharmasukumara6@gmail.com</span></p>
+            </div>
+        </div>
+    </header>
+
+    <div class="maincontainer">
+        <form>
+            <div class="up">
+                <div class="item1">
+                    <span>Course Code: </span>
+                    <select name="courseid" id="ccode">
+                    </select>
+                </div>
+                <div class="item2">
+                    <!-- Course: <input type="text" name="coursename"> -->
+                </div>
+                <div class="item3">
+                    <!-- Number of Class: <input type="text" name="no_of_class"> -->
+                </div>
+                <div class="item4">
+                    <label for="datetime">Date & Time:</label>
+                    <input type="date" id="dtime" name="date_time">
+                    <input type="time" id="dtime1" name="time">
+                </div>
+            </div>
+            <div class="down">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>USN</th>
+                            <th>Absent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>Eren Yeager</td>
+                            <td>01JST18CS182</td>
+                            <td>
+                                <div class="checkabsent"> <input type="checkbox" value="absent"></div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
