@@ -5,9 +5,9 @@
 
 .logincontainer {
     display: flex;
-    background-image: url("bg.jpg");
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), black), url("bg.jpg");
     font-family: 'Baloo Bhaina 2', cursive;
-    justify-content: center;
+    /*justify-content: center;*/
     /* top: 300px; */
     align-items: center;
     flex-direction: column;
@@ -23,13 +23,13 @@
     left: 50%;
     margin-left: -3px;
     /* justify-self: center; */
-    bottom: 100px;
+    bottom: 450px;
 }
 
 div {
     text-align: center;
     font-weight: bolder;
-    color: darkblue;
+    color: #d3e6dc;
 }
 
 input[type="submit"] {

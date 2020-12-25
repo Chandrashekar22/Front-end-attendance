@@ -8,26 +8,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
 </head>
 
 <body>
     <div class="logincontainer">
         <div id="vl"></div>
-        <form action="backend.php" name="form">
+        <form action="../student-home/home.html" name="form">
             <div><span id="logname">Login</span></div>
             <div class="student">
                 <div> <span>Student :</span>
-                    <input type="text" name="studentname" placeholder="Enter Name">
+                    <input type="text" name="studentname" placeholder="Enter USN">
                 </div>
                 <div>
                     <input type="submit" value="Submit">
                 </div>
             </div>
         </form>
-        <form action="../home/home.html" name="form">
+        <form action="../teacher-home/home.html" name="form">
             <div class="teacher">
                 <div><span>Teacher :</span>
-                    <input type="text" name="teachername" placeholder="Enter Name">
+                    <input type="text" name="teachername" placeholder="Enter Teacher ID">
                 </div>
                 <div>
                     <input type="submit" value="Submit">
@@ -35,6 +36,8 @@
             </div>
         </form>
     </div>
+
+    <script type="text/javascript" src="main.js"></script>
 
 </body>
 
