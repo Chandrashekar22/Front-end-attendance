@@ -54,10 +54,37 @@ body {
     font-size: 16px;
 }
 
-.btn:hover {
-    background-color: rgb(99, 80, 80);
+#contactinfo {
+    display: none;
 }
 
-#contact-info {
-    
+.hoverinfo:hover #contactinfo {
+    background-color: rgb(99, 80, 80);
+    display: block;
+}
+
+#contactinfo p {
+    text-align: center;
+    background-color: black;
+}
+
+.up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.down {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    /* justify-content: left; */
+}
+
+.maincontainer {
+    display: flex;
+    /* align-content: center; */
+    /* justify-content: center; */
+    width: 100vw;
 }
