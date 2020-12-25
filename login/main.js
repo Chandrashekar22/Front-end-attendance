@@ -22,7 +22,7 @@ $("form").submit(function(e){
 	let thisFormName = this.name;
 	let tid = $(this)[0][0].value;
 	console.log(thisForm);
-	console.log(thisFormType);
+	console.log(thisFormName);
 	//console.log(tid);
 	// store only tid in session storage
 	sessionStorage.setItem("tid", tid);
