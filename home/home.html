@@ -16,9 +16,9 @@
     <header class="header">
         <div class="mid">
             <ul class="navbar">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Search</a></li>
-                <li><a href="#">Take Attendance</a></li>
+                <li><a href="#" class="active">Take Attendance</a></li>
                 <li><a href="#">About Me</a></li>
             </ul>
         </div>
@@ -45,31 +45,25 @@
     <div class="maincontainer">
         <form action="backendselect.php">
             <div class="up">
-                <div>
-                    <label for="coursecode">Course Code</label>
+                <div class="item1">
+                    <label for="coursecode">Course Code:</label>
                     <select name="courseid" id="ccode">
                         <option value="CS510" selected>CS510</option>
                         <option value="CS520">CS520</option>
                     </select>
+                </div class="item2">
+                <div>Course: <input type="text" name="coursename">
                 </div>
-                <div>
-                    <label for="datetime">Date & Time</label>
-                    <input type="datetime-local" id="dtime" name="date_time">
-                </div>
-                <div>
-                    <input type="submit" value="Submit">
-                </div>
-            </div>
-        </form>
-        <form action="backendsub.php">
-            <div class="down">
-                <div><br> Course: <input type="text" name="coursename">
-                </div>
-                <div>
+                <div class="item3">
                     Number of Class: <input type="text" name="no_of_class">
                 </div>
-
-                <table>
+                <div class="item4">
+                    <label for="datetime">Date & Time:</label>
+                    <input type="datetime-local" id="dtime" name="date_time">
+                </div>
+            </div>
+            <div class="down">
+                <table class="styled-table">
                     <thead>
                         <tr>
                             <th>Student Name</th>
@@ -87,10 +81,10 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
 
+            </div>
             <div>
-                <input type="submit" value="Submitab">
+                <input type="submit" value="Submit">
             </div>
         </form>
     </div>
