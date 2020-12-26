@@ -8,6 +8,7 @@ $.getJSON(url, {tid}, function(data){
 	console.log(data);
 	console.log(typeof(data));
 }).done(function(data){
+	sessionStorage.setItem("studentObject", data);
 	let items = [];
 	$.each( data, function(key, val) {
 		if(key == "courses") {

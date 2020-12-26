@@ -1,7 +1,7 @@
 var tid = sessionStorage.getItem("tid");
-//var url = "http://35.200.201.98:5000/teacher/" + tid;
+var url = "http://35.200.201.98:5000/teacher/" + tid;
 //var url = "http://35.200.201.98:5000/teacher/t2";
-var url = "/t2.json";
+//var url = "/t2.json";
 var teacherDetails;
 
 $.getJSON(url, {tid}, function(data){
@@ -24,7 +24,7 @@ $.getJSON(url, {tid}, function(data){
 	$.each(data.courses[Object.keys(data.courses)[0]].students, function(key, val) {
 		console.log(key, val);
 		// change val.email to val.usn later
-		items.push("<tr><td>" + val.name + "</td><td>" + val.email + "</td><td><div class=\"checkabsent\"> <input type=\"checkbox\" name=\"absent\" value=\"" + val.email + "\"></div></td></tr>");
+		items.push("<tr><td>" + val.name + "</td><td>" + val.usn + "</td><td><div class=\"checkabsent\"> <input type=\"checkbox\" name=\"absent\" value=\"" + val.usn + "\"></div></td></tr>");
 		console.log("items of table=" + items);
 	});
 	$(".styled-table tbody").html(items.join(""));
@@ -41,7 +41,7 @@ $("#ccode").change(function(){
 	$.each(teacherDetails.courses[this.value].students, function(key, val) {
 		console.log(key, val);
 		// change val.email to val.usn later
-		items.push("<tr><td>" + val.name + "</td><td>" + val.email + "</td><td><div class=\"checkabsent\"> <input type=\"checkbox\" name=\"absent\" value=\"" + val.email + "\"></div></td></tr>");
+		items.push("<tr><td>" + val.name + "</td><td>" + val.usn + "</td><td><div class=\"checkabsent\"> <input type=\"checkbox\" name=\"absent\" value=\"" + val.usn + "\"></div></td></tr>");
 		console.log("items of table=" + items);
 	});
 	$(".styled-table tbody").html(items.join(""));
@@ -67,8 +67,34 @@ $("form").submit(function(e){
 		absentees_usn.push(val.value);
 	});
 	console.log(absentees_usn);
-	let the_json_obj = {teacher_id: tid, course_id: ccode, absent: absentees_usn};
+	let the_json_obj = {teacher_id: tid, course_id: ccode, absent: absentees_usn, datetime: abs_date + " " + abs_time};
 	console.log(the_json_obj);
 	the_json = JSON.stringify(the_json_obj);
-	$.post(url, the_json);
+	let url1 = "http://35.200.201.98:5000/attendance";
+	console.log(the_json);
+	//$.post(url1, the_json, null, "json");
+	/*$.ajax({
+	  type: "POST",
+	  url: url1,
+	  data: the_json,
+	  success: null,
+	  dataType: "json",
+	  contentType: "application/json;charset=utf-8",
+	  headers: { "Access-Control-Request-Headers" : "*"},
+	  accepts: "application/json"
+	});*/
+	let xhttp = new XMLHttpRequest();
+	xhttp.open("POST", "http://35.200.201.98:5000/attendance", true);
+	xhttp.setRequestHeader("Content-type", "application/json");
+	xhttp.send(the_json); 
+	/*const options = {
+		method: "POST",
+		body: the_json,
+		headers: {
+			"Content-Type": "application/json"
+		}
+	}
+
+	//fetch(url1, options).then(res => res.json()).then(res => console.log(res)).catch(err => console.error(err));
+	fetch(url1, options).then(res => res.json()).then(res => console.log(res));*/
 });

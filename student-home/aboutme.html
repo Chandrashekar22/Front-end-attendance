@@ -5,5 +5,18 @@
 </head>
 <body>
 	This is the student detail page.
+	<div id="about-me"></div>
+	<script type="text/javascript">
+		//sessionStorage.setItem("tid", tid);
+		let studentObject = sessionStorage.getItem("studentObject");
+		let items = [];
+		for (const key in studentObject) {
+			if(key == "courses"){
+				continue;
+			}
+			items.push( "<li id='" + key + "'>" + capitalize(key) + ": " + studentObject.key + "</li>" );
+		}
+		document.getElementById("about-me").innerHTML = items.join("");
+	</script>
 </body>
 </html>

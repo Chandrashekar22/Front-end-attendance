@@ -1,0 +1,13 @@
+POST /attendance HTTP/1.0
+Host: 35.200.201.98:5000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/json; charset=UTF-8
+Content-Length: 51
+Origin: http://localhost:8000
+Connection: keep-alive
+Referer: http://localhost:8000/teacher-home/home.html?teachername=t2
+Pragma: no-cache
+Cache-Control: no-cache
