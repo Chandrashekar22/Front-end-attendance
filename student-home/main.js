@@ -2,7 +2,7 @@ $("#contact-info").hide();
 
 //var url = "http://77bcbb72f106.ngrok.io/student/01JST18CS001";
 var tid = sessionStorage.getItem("tid");
-var url = "http://77bcbb72f106.ngrok.io/student/" + tid;
+var url = "http://35.200.201.98:5000/student/" + tid;
 
 $.getJSON(url, {tid}, function(data){
 	console.log(data);
