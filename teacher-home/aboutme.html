@@ -9,15 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="jquery.js"></script>
-	<!--<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>-->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
     <header class="header">
         <div class="mid">
             <ul class="navbar">
-                <li><button id="student-direction" autofocus>Student Details</button></li>
-                <li><button id="about-page-direction">About Me</button></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="./search.html">Search</a></li>
+                <li><a href="./home.html">Take Attendance</a></li>
+                <li><a href="#" class="active">About Me</a></li>
             </ul>
         </div>
         <div class="right hoverinfo">
@@ -31,12 +33,22 @@
         </div>
     </header>
 
-    <main>
-        <div id="student-details">
+    <div class="maincontainer">
+        <div class="up">
+            <div class="item1">
+            </div>
+            <div class="item2">
+                <!-- Course: <input type="text" name="coursename"> -->
+            </div>
+            <div class="item3">
+                <!-- Number of Class: <input type="text" name="no_of_class"> -->
+            </div>
+            <div class="item4">
+            </div>
         </div>
-    </main>
+    </div>
 
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="main_about.js"></script>
 </body>
 
 </html>

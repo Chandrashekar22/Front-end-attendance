@@ -1,7 +1,7 @@
 var tid = sessionStorage.getItem("tid");
 //var url = "http://35.200.201.98:5000/teacher/" + tid;
-//var url = "http://35.200.201.98:5000/teacher/t2";
-var url = "/t2.json";
+var url = "http://35.200.201.98:5000/teacher/t2";
+//var url = "/t2.json";
 var teacherDetails;
 
 $.getJSON(url, {tid}, function(data){
@@ -24,7 +24,7 @@ $.getJSON(url, {tid}, function(data){
 	$.each(data.courses[Object.keys(data.courses)[0]].students, function(key, val) {
 		console.log(key, val);
 		// change val.email to val.usn later
-		items.push("<tr><td>" + val.name + "</td><td>" + val.email + "</td><td><div class=\"checkabsent\"> <input type=\"checkbox\" name=\"absent\" value=\"" + val.email + "\"></div></td></tr>");
+		items.push("<tr><td>" + val.name + "</td><td>" + val.email + "</td><td>" + val.phone + "</td><td>" + val.email + "</td></tr>");
 		console.log("items of table=" + items);
 	});
 	$(".styled-table tbody").html(items.join(""));
@@ -52,7 +52,7 @@ $("#ccode").change(function(){
 
 });
 
-$("form").submit(function(e){
+/*$("form").submit(function(e){
 	e.preventDefault();
 	let abs_date = $("#dtime").val();
 	let abs_time = $("#dtime1").val();
@@ -68,7 +68,7 @@ $("form").submit(function(e){
 	});
 	console.log(absentees_usn);
 	let the_json_obj = {teacher_id: tid, course_id: ccode, absent: absentees_usn};
-	console.log(the_json_obj);
-	the_json = JSON.stringify(the_json_obj);
+	console.log(the_json);
+	//the_json = JSON.stringify(the_json_obj);
 	$.post(url, the_json);
-});
+});*/

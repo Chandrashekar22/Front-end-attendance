@@ -27,7 +27,7 @@ $("form").submit(function(e){
 	// store only tid in session storage
 	sessionStorage.setItem("tid", tid);
 	console.log("tid="+tid);
-	url = "http://77bcbb72f106.ngrok.io/login/" + thisFormName + "/" + tid;
+	url = "http://35.200.201.98:5000/login/" + thisFormName + "/" + tid;
 	$.getJSON(url, {tid}, function(data){
 		console.log(data);
 		if(data.valid == true) {
@@ -36,10 +36,4 @@ $("form").submit(function(e){
 			alert("The usn or teacher id you entered is invalid");
 		}
 	});
-	//$.post(url, tid);	// either this method
-	//or
-	//url = "http://18b9735fa65e.ngrok.io/student/01JST18CS066";
-	
-
-	// if the response header says invalid username, display message "Invalid ID"
 });
